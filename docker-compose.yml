@@ -1,0 +1,41 @@
+version: '3.3'
+services:
+  provider: 
+    build: ./SWE_Dependencies_Provider
+    restart: always
+    ports:
+      - "8180:80"
+    depends_on:
+      - db
+    environment:
+      - ConnectionString="Server=db;Database=roombookingdb;User=sa;Password=Super@Str0ng;TrustServerCertificate=true"
+  consumer1: 
+    build: ./SWE_Consumer1
+    restart: always
+    ports:
+      - "8088:80"
+    depends_on:
+      - provider
+    environment:
+      - BaseUrl=http://provider:80/
+  consumer2: 
+    build: ./SWE_Consumer2
+    restart: always
+    ports:
+      - "8089:80"
+    environment:
+      - BaseUrl=http://provider:80/
+  db:
+    image: "mcr.microsoft.com/mssql/server"
+    restart: always
+    environment:
+      - SA_PASSWORD=Super@Str0ng
+      - ACCEPT_EULA=Y
+    expose:
+      - '1433'
+    volumes:
+      - db:/var/opt/mssql
+volumes:
+  db:
+    driver: local
+

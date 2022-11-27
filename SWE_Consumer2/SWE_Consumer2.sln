@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SWE_Consumer2", "SWE_Consumer2\SWE_Consumer2.csproj", "{C54172E0-75C8-4B17-8AAD-2B15F9A646AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SWE_Consumer2Tests", "SWE_Consumer2Tests\SWE_Consumer2Tests.csproj", "{07621F12-A184-42D2-B84B-74E2BDBE0D7A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C54172E0-75C8-4B17-8AAD-2B15F9A646AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C54172E0-75C8-4B17-8AAD-2B15F9A646AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C54172E0-75C8-4B17-8AAD-2B15F9A646AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C54172E0-75C8-4B17-8AAD-2B15F9A646AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07621F12-A184-42D2-B84B-74E2BDBE0D7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07621F12-A184-42D2-B84B-74E2BDBE0D7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07621F12-A184-42D2-B84B-74E2BDBE0D7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07621F12-A184-42D2-B84B-74E2BDBE0D7A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

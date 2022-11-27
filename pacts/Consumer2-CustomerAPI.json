@@ -1,0 +1,112 @@
+{
+  "consumer": {
+    "name": "Consumer2"
+  },
+  "interactions": [
+    {
+      "description": "A GET request to retrieve all customer data",
+      "providerStates": [
+        {
+          "name": "No customer data"
+        }
+      ],
+      "request": {
+        "headers": {
+          "Accept": "*/*"
+        },
+        "method": "GET",
+        "path": "/api/Customer"
+      },
+      "response": {
+        "body": [],
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "matchingRules": {
+          "body": {
+            "$": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            }
+          },
+          "header": {}
+        },
+        "status": 200
+      }
+    },
+    {
+      "description": "A GET request to retrieve all customer data",
+      "providerStates": [
+        {
+          "name": "There are two customers"
+        }
+      ],
+      "request": {
+        "headers": {
+          "Accept": "*/*"
+        },
+        "method": "GET",
+        "path": "/api/Customer"
+      },
+      "response": {
+        "body": [
+          {
+            "financialProducts": [
+              {
+                "balance": 200.0
+              },
+              {
+                "balance": 100.0
+              }
+            ],
+            "name": "Mika Huber"
+          },
+          {
+            "financialProducts": [
+              {
+                "balance": 250.0
+              },
+              {
+                "balance": 99.5
+              }
+            ],
+            "name": "Alexander Kauper"
+          }
+        ],
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "matchingRules": {
+          "body": {
+            "$": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            }
+          },
+          "header": {}
+        },
+        "status": 200
+      }
+    }
+  ],
+  "metadata": {
+    "pactRust": {
+      "ffi": "0.3.11",
+      "models": "0.4.5"
+    },
+    "pactSpecification": {
+      "version": "3.0.0"
+    }
+  },
+  "provider": {
+    "name": "CustomerAPI"
+  }
+}
